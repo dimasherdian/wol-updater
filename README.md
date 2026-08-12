@@ -18,13 +18,21 @@ That frustrating experience turned into an opportunity. I decided to dive into *
 
 This project is the result: a custom, reliable, and aesthetically pleasing updater built from scratch using Clean Architecture.
 
-## Why This Updater is Better
+<p align="center">
+  <img src="assets/demo.gif" width="860" alt="Wars of Liberty Updater Demo">
+</p>
 
-- **Safe, Atomic Updates**: No more corrupted game states. Files are downloaded and verified in a temporary folder first. Your live game is never touched until the download is 100% validated.
-- **Strict Directory Validation**: It actively checks for `age3y.exe` before doing anything, ensuring you never accidentally install gigabytes of data into the wrong folder.
-- **Built-in Data Backup**: Easily backup and restore your profiles, save states, and home cities directly from the UI.
-- **Hardware-Accelerated UI**: A modern JavaFX interface with dynamic Dark/Light modes and multi-language support.
-- **Fully Open-Source**: Transparent, community-driven, and easy to maintain.
+## The Numbers & Difference
+
+The original updater had a few critical flaws that made it prone to breaking the game. Here is a direct comparison of how this new implementation solves them:
+
+| Feature | Legacy Updater | New Java Updater |
+|---|:---:|:---:|
+| **Network Fault Tolerance** | ❌ Corrupts game on disconnect | ✅ **Safe atomic caching** |
+| **Directory Validation** | ❌ Blind installation anywhere | ✅ **Strict `age3y.exe` verify** |
+| **Data Retention** | ❌ Zero backups | ✅ **Built-in profile backup UI** |
+| **Maintainability** | ❌ Proprietary black-box | ✅ **Clean Architecture (Open-Source)** |
+| **UI Rendering** | ❌ Outdated forms | ✅ **Hardware-Accelerated JavaFX** |
 
 ## Build Instructions
 
