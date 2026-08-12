@@ -1,36 +1,26 @@
 # Wars of Liberty Updater
 
-A robust, Java-based open-source updater designed specifically for the Wars of Liberty modification (Age of Empires III). 
+*A robust, Java-based open-source updater designed specifically for the Wars of Liberty modification (Age of Empires III).*
 
-**Disclaimer of Liability**: This application is currently in active development. It is provided "as is" without warranty of any kind, express or implied. The authors and contributors are not responsible for any data loss, game corruption, or any other damages that may arise from the use of this software.
+## The Backstory: Why Build Another Updater?
 
-**Notice**: This is an unofficial, community-driven project and is not affiliated with, endorsed by, or owned by the official Wars of Liberty development team.
+It started with a simple frustration. The legacy updater for Wars of Liberty looked outdated and lacked visual appeal. Then, the developers released a new C# launcher that behaved surprisingly similar to a Java application. That sparked a thought: *"Why not just build it in Java from the start?"*
 
-## Architecture and Design Principles
+But the real breaking point came during an update. I used the new official launcher to update the mod to the latest version. Everything seemed fine until I hit "Play"—the game immediately crashed with an error. 
 
-The application is built upon Clean Architecture principles, ensuring a strict separation of concerns across Presentation, Business Logic, and Data/Storage layers. This architectural approach guarantees that the codebase remains highly maintainable, testable, and extensible for future community contributions.
+I spent an entire day trying to fix that error. The last thing I wanted was to re-download gigabytes of mod data all over again just because an update process corrupted a few files.
 
-## Key Capabilities
+That frustrating experience turned into an opportunity. I decided to dive into **reverse engineering** to understand exactly how the original updater communicated with the servers, downloaded files, and applied patches. My goal wasn't just to learn; it was to build a fail-safe, atomic updater that guarantees your game won't break if your internet drops or a file fails to extract.
 
-### Strict Validation and Integrity
-The updater implements strict boundary validation to prevent destructive file operations. It proactively verifies the presence of the base game executable (`age3y.exe`) prior to initiating any installation sequence. This guarantees that modifications are only applied to valid Age of Empires III installation directories. Furthermore, payload integrity is verified through hash checks before and after extraction.
+This project is the result: a custom, reliable, and aesthetically pleasing updater built from scratch using Clean Architecture.
 
-### Atomic Download and Extraction
-To mitigate the risk of corrupted installations caused by network interruptions, the application employs an atomic update flow. Payloads are securely downloaded to a designated temporary directory. The live game state is never modified until the download is fully validated, ensuring the game remains playable even if an update process fails prematurely.
+## Why This Updater is Better
 
-### State Management and Backup
-The updater features an integrated User Data manager that automatically resolves the `My Games/Age of Empires 3` path. Users can safely archive their progression (save states, profiles, and home city decks) into compressed backup files. These archives can be restored directly through the application interface to recover from potential data loss.
-
-### Presentation Layer
-The presentation layer is implemented using JavaFX, delivering a hardware-accelerated, responsive graphical user interface. The UI relies on structured CSS, supporting dynamic theme switching (Dark and Light modes) and multi-language localization (English and Indonesian).
-
-## Feature Comparison: Original Updater vs Current Implementation
-
-This project addresses several critical limitations present in the legacy updater:
-1. **Network Fault Tolerance**: The legacy updater extracts files concurrently during download, which frequently results in corrupted game states upon connection drops. The current implementation utilizes a safe temporary caching mechanism.
-2. **Directory Validation**: The legacy updater permits installation to arbitrary paths without validation. The current implementation strictly enforces path verification.
-3. **Data Retention**: The legacy updater lacks data retention utilities. The current implementation provides integrated backup and restore mechanisms for user profiles.
-4. **Maintainability**: The current implementation is open-source and structured using Clean Architecture, allowing for straightforward community improvements.
+- **Safe, Atomic Updates**: No more corrupted game states. Files are downloaded and verified in a temporary folder first. Your live game is never touched until the download is 100% validated.
+- **Strict Directory Validation**: It actively checks for `age3y.exe` before doing anything, ensuring you never accidentally install gigabytes of data into the wrong folder.
+- **Built-in Data Backup**: Easily backup and restore your profiles, save states, and home cities directly from the UI.
+- **Hardware-Accelerated UI**: A modern JavaFX interface with dynamic Dark/Light modes and multi-language support.
+- **Fully Open-Source**: Transparent, community-driven, and easy to maintain.
 
 ## Build Instructions
 
@@ -43,7 +33,7 @@ The build process is automated via Maven Wrapper and PowerShell scripts.
 ### Compilation Profiles
 
 **1. Minimal Distribution (Self-Contained)**
-This profile utilizes `jlink` and `jpackage` to bundle a minimal Java Runtime Environment. The resulting executable does not require Java to be installed on the host operating system.
+This profile utilizes `jlink` to bundle a minimal Java Runtime Environment. The resulting executable does not require Java to be installed on the host operating system.
 ```powershell
 .\build-minimal.ps1
 ```
