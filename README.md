@@ -67,3 +67,9 @@ To execute the application directly from source:
 ```powershell
 .\mvnw.cmd clean compile javafx:run
 ```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 
+
+**Legal & Trademarks**: "Wars of Liberty", "Age of Empires III", and all related assets are the property of their respective owners and creators. This tool claims no ownership over the game, the mod, or its official assets. This is a clean-room implementation of a third-party client and does not contain proprietary source code from the original updater.
