@@ -17,8 +17,6 @@ That frustrating experience turned into create my own updater. I decided to dive
 
 **A Huge Thank You to the Devs:** Before going further, I want to make it clear that I absolutely love this mod. I play it almost every single day, and the amount of effort the development team has poured into Wars of Liberty is incredible. This project is my way of giving back to the community by providing a tool that solves a specific connectivity issue.
 
-This project is the result: a custom, reliable, and aesthetically pleasing updater built from scratch using Clean Architecture.
-
 <p align="center">
   <img src="assets/demo.gif" width="860" alt="Wars of Liberty Updater Demo">
 </p>
