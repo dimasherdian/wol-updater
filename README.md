@@ -1,4 +1,8 @@
 # Wars of Liberty Updater
+<img width="88" height="31" alt="button-88x31" src="https://github.com/user-attachments/assets/14528d6c-bf9d-4048-afcd-7621a9be9887" />
+
+<img width="88" height="31" alt="image" src="https://github.com/user-attachments/assets/2405a573-5b4e-47fb-8649-a2a3514b7d13" /> <img width="88" height="31" alt="image" src="https://github.com/user-attachments/assets/9d831bf7-aef0-4baa-96ac-7a76d6190e47" />
+
 
 *A robust, Java-based open-source updater designed specifically for the Wars of Liberty modification (Age of Empires III).*
 
