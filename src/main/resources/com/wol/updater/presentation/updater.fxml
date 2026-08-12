@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.shape.*?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.wol.updater.presentation.UpdaterController" stylesheets="@style.css" styleClass="root-pane, light-mode" prefWidth="900" prefHeight="600" style="-fx-background-color: transparent; -fx-padding: 20;">
+    <HBox AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" styleClass="win-window">
+        <!-- Sidebar -->
+
+        <VBox fx:id="sidebar" styleClass="sidebar" prefWidth="220" spacing="10" onMousePressed="#handleTitleBarPressed" onMouseDragged="#handleTitleBarDragged">
+            <HBox.margin>
+                <Insets top="20" right="10" bottom="20" left="20"/>
+            </HBox.margin>
+                <padding>
+                    <Insets top="20" right="20" bottom="20" left="20"/>
+                </padding>
+                
+                <!-- Hamburger Button -->
+                <Button styleClass="icon-btn" onAction="#handleToggleSidebar">
+                    <graphic>
+                        <SVGPath content="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" styleClass="icon-path"/>
+                    </graphic>
+                </Button>
+                
+                <Region prefHeight="10"/>
+                
+                <Text fx:id="brandText" text="%app.title" styleClass="brand-text" wrappingWidth="180"/>
+                <Region prefHeight="20" />
+                
+                <Button text="%tab.home" fx:id="navHome" maxWidth="Infinity" styleClass="nav-button, active-nav" onAction="#showHome"/>
+                <Button text="%tab.update" fx:id="navUpdates" maxWidth="Infinity" styleClass="nav-button" onAction="#showUpdates" visible="false" managed="false"/>
+                <Button text="%tab.user_data" fx:id="navUserData" maxWidth="Infinity" styleClass="nav-button" onAction="#showUserData"/>
+                <Button text="%tab.settings" fx:id="navSettings" maxWidth="Infinity" styleClass="nav-button" onAction="#showSettings"/>
+                <Button text="%tab.about" fx:id="navAbout" maxWidth="Infinity" styleClass="nav-button" onAction="#showAbout"/>
+                
+                <Region VBox.vgrow="ALWAYS" />
+                
+                <Text text="%about.version" styleClass="version-text"/>
+            </VBox>
+        <!-- Main Content Area -->
+        <VBox HBox.hgrow="ALWAYS">
+            <!-- Title Bar -->
+            <HBox alignment="CENTER_RIGHT" onMousePressed="#handleTitleBarPressed" onMouseDragged="#handleTitleBarDragged" style="-fx-padding: 12 15;">
+                
+                <!-- Notification Bell -->
+                <StackPane onMouseClicked="#handleNotificationClick" styleClass="icon-btn">
+                    <SVGPath content="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" styleClass="icon-path"/>
+                    <Circle fx:id="notificationBadge" fill="#FF5F56" radius="4" StackPane.alignment="TOP_RIGHT" translateX="-2" translateY="2" visible="false" managed="false"/>
+                </StackPane>
+                
+                <Region prefWidth="15"/>
+                
+                <!-- Windows Controls -->
+                <Button styleClass="win-btn, win-minimize" onAction="#handleMinimizeApp">
+                    <graphic>
+                        <SVGPath content="M 0,5 H 10 V 6 H 0 Z" styleClass="win-btn-icon"/>
+                    </graphic>
+                </Button>
+                <Button styleClass="win-btn, win-maximize" onAction="#handleMaximizeApp">
+                    <graphic>
+                        <SVGPath content="M 1,1 H 9 V 9 H 1 Z" strokeWidth="1.5" styleClass="win-btn-icon-stroke"/>
+                    </graphic>
+                </Button>
+                <Button styleClass="win-btn, win-close" onAction="#handleCloseApp">
+                    <graphic>
+                        <SVGPath content="M 1,1 L 9,9 M 9,1 L 1,9" strokeWidth="1.5" styleClass="win-btn-icon-stroke"/>
+                    </graphic>
+                </Button>
+            </HBox>
+
+            <StackPane VBox.vgrow="ALWAYS">
+                
+                <!-- HOME VIEW -->
+                <VBox fx:id="homeView" styleClass="main-content" spacing="20">
+                    <padding>
+                        <Insets top="20" right="40" bottom="40" left="40"/>
+                    </padding>
+                    
+                    <!-- Page Title (Visible when sidebar hidden) -->
+                    <Text fx:id="pageTitleHome" text="%tab.home" styleClass="page-title"/>
+                    
+                    <VBox styleClass="status-card" spacing="10">
+                        <padding>
+                            <Insets top="20" right="20" bottom="20" left="20"/>
+                        </padding>
+                        <Label fx:id="statusTitle" text="%status.checking" styleClass="status-title" wrapText="true"/>
+                        <Label fx:id="statusSubtitle" text="Please wait while we verify your installation." styleClass="status-subtitle" wrapText="true"/>
+                        <Label fx:id="installPathText" text="Path: Not found" styleClass="status-subtitle" wrapText="true"/>
+                        <Label fx:id="installedVersionText" text="Installed Version: Unknown" styleClass="status-subtitle" wrapText="true" visible="false" managed="false"/>
+                        <Label fx:id="latestVersionText" text="Latest Version: Unknown" styleClass="status-subtitle" wrapText="true" visible="false" managed="false"/>
+                    </VBox>
+                    
+                    <Region VBox.vgrow="ALWAYS" />
+                    
+                    <HBox spacing="15" alignment="BOTTOM_RIGHT">
+                        <Button text="%history.title" styleClass="secondary-button" onAction="#handleViewHistory"/>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Button fx:id="browseButton" text="BROWSE INSTALLATION" visible="false" managed="false" styleClass="secondary-button" onAction="#handleBrowse"/>
+                        <Button fx:id="actionButton" text="%btn.update" visible="false" managed="false" styleClass="primary-button" onAction="#handleAction"/>
+                    </HBox>
+                </VBox>
+                
+                <!-- UPDATES VIEW -->
+                <VBox fx:id="updatesView" styleClass="main-content" spacing="20" visible="false">
+                    <padding>
+                        <Insets top="20" right="40" bottom="40" left="40"/>
+                    </padding>
+                    
+                    <Text text="%tab.update" styleClass="section-header"/>
+                    
+                    <VBox styleClass="status-card" spacing="15">
+                        <padding>
+                            <Insets top="20" right="20" bottom="20" left="20"/>
+                        </padding>
+                        <Label fx:id="updateProgressTitle" text="Update Progress" styleClass="status-title" wrapText="true"/>
+                        
+                        <VBox fx:id="progressContainer" spacing="5">
+                            <ProgressBar fx:id="progressBar" progress="0.0" prefWidth="600"/>
+                            <HBox alignment="CENTER">
+                                <Label fx:id="progressText" text="Waiting..." styleClass="progress-text"/>
+                                <Region HBox.hgrow="ALWAYS" />
+                                <Label fx:id="progressDetails" text="0 / 0 MB" styleClass="progress-text"/>
+                            </HBox>
+                        </VBox>
+                    </VBox>
+                    
+                    <Region VBox.vgrow="ALWAYS" />
+                    
+                    <HBox spacing="15" alignment="BOTTOM_RIGHT">
+                        <Button text="%history.title" styleClass="secondary-button" onAction="#handleViewHistory"/>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Button fx:id="pauseButton" text="%btn.pause" visible="false" managed="false" styleClass="secondary-button" onAction="#handlePause"/>
+                        <Button fx:id="resumeButton" text="%btn.resume" visible="false" managed="false" styleClass="primary-button" onAction="#handleResume"/>
+                        <Button fx:id="abortButton" text="%btn.abort" visible="false" managed="false" styleClass="secondary-button" style="-fx-text-fill: #ff4444;" onAction="#handleAbort"/>
+                    </HBox>
+                </VBox>
+                
+                <!-- SETTINGS VIEW -->
+                <VBox fx:id="settingsView" styleClass="main-content" spacing="20" visible="false">
+                    <padding>
+                        <Insets top="20" right="0" bottom="0" left="0"/>
+                    </padding>
+                    <HBox alignment="CENTER_LEFT" spacing="15">
+                        <padding>
+                            <Insets left="40"/>
+                        </padding>
+                        <Text fx:id="pageTitleSettings" text="%tab.settings" styleClass="page-title"/>
+                    </HBox>
+                    
+                    <ScrollPane fitToWidth="true" styleClass="settings-scroll" VBox.vgrow="ALWAYS" style="-fx-background-color: transparent; -fx-background: transparent;">
+                        <VBox spacing="20" styleClass="settings-container">
+                            <padding>
+                                <Insets top="10" right="40" bottom="40" left="40"/>
+                            </padding>
+                            
+                            <!-- PATHS SECTION -->
+                            <VBox spacing="15">
+                                <Text text="PATHS" styleClass="section-header"/>
+                                <VBox spacing="5">
+                                    <HBox alignment="CENTER_LEFT" spacing="5">
+                                        <Label text="%settings.header.path" styleClass="settings-check"/>
+                                        <Label text="[ i ]" styleClass="info-icon" onMouseClicked="#showInstallPathInfo"/>
+                                    </HBox>
+                                    <HBox spacing="10">
+                                        <TextField fx:id="installPathField" editable="false" HBox.hgrow="ALWAYS"/>
+                                        <Button text="%settings.btn.browse" styleClass="secondary-button" onAction="#handleChangeInstallPath"/>
+                                    </HBox>
+                                </VBox>
+                                <VBox spacing="5">
+                                    <HBox alignment="CENTER_LEFT" spacing="5">
+                                        <Label text="%settings.header.download" styleClass="settings-check"/>
+                                        <Label text="[ i ]" styleClass="info-icon" onMouseClicked="#showTempPathInfo"/>
+                                    </HBox>
+                                    <HBox spacing="10">
+                                        <TextField fx:id="downloadPathField" editable="false" HBox.hgrow="ALWAYS"/>
+                                        <Button text="%settings.btn.browse" styleClass="secondary-button" onAction="#handleChangeDownloadPath"/>
+                                    </HBox>
+                                </VBox>
+                            </VBox>
+                            
+                            <!-- APPEARANCE SECTION -->
+                            <VBox spacing="15">
+                                <Text text="APPEARANCE" styleClass="section-header"/>
+                                <HBox alignment="CENTER_LEFT" spacing="10">
+                                    <Label text="Theme" styleClass="settings-check"/>
+                                    <Button styleClass="icon-btn" onAction="#handleToggleTheme">
+                                        <graphic>
+                                            <SVGPath fx:id="themeIconPath" content="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" styleClass="icon-stroke"/>
+                                        </graphic>
+                                    </Button>
+                                </HBox>
+                            </VBox>
+                            
+                            <!-- GENERAL SECTION -->
+                            <VBox spacing="15">
+                                <Text text="GENERAL" styleClass="section-header"/>
+                                <CheckBox fx:id="chkCheckOnStartup" text="%settings.chk.startup" styleClass="settings-check"/>
+                                <CheckBox fx:id="chkAutoDownload" text="%settings.chk.auto_download" styleClass="settings-check"/>
+                                <CheckBox fx:id="chkConfirmBeforeInstall" text="%settings.chk.confirm" styleClass="settings-check"/>
+                                <CheckBox fx:id="chkBackup" text="%settings.chk.backup" styleClass="settings-check"/>
+                                <CheckBox fx:id="chkVerifyFiles" text="%settings.chk.verify" styleClass="settings-check"/>
+                                <CheckBox fx:id="chkLogging" text="%settings.chk.logging" styleClass="settings-check"/>
+                                
+                                <HBox spacing="10" alignment="CENTER_LEFT">
+                                    <Label text="%settings.header.language" styleClass="settings-check" prefWidth="160"/>
+                                    <ComboBox fx:id="languageComboBox" prefWidth="200" />
+                                </HBox>
+                            </VBox>
+    
+                            <!-- MAINTENANCE SECTION -->
+                            <VBox spacing="15">
+                                <Text text="MAINTENANCE" styleClass="section-header"/>
+                                <Button text="Clear temporary files" styleClass="secondary-button" onAction="#handleClearTemp"/>
+                            </VBox>
+                            
+                        </VBox>
+                    </ScrollPane>
+                    
+                    <HBox spacing="15" alignment="BOTTOM_RIGHT">
+                        <padding>
+                            <Insets right="40" bottom="20"/>
+                        </padding>
+                        <Button text="SAVE SETTINGS" styleClass="primary-button" onAction="#handleSaveSettings"/>
+                    </HBox>
+                </VBox>
+                
+                <!-- USER DATA VIEW -->
+                <VBox fx:id="userDataView" styleClass="main-content" spacing="20" visible="false">
+                    <padding>
+                        <Insets top="40" right="40" bottom="40" left="40"/>
+                    </padding>
+                    <Text fx:id="pageTitleUserData" text="%tab.user_data" styleClass="page-title"/>
+                    
+                    <ScrollPane fitToWidth="true" styleClass="settings-scroll" VBox.vgrow="ALWAYS">
+                        <VBox spacing="15" styleClass="settings-container">
+                            <Text text="Location" styleClass="status-subtitle"/>
+                            <HBox alignment="CENTER_LEFT" spacing="10">
+                                <TextField fx:id="userDataPathField" HBox.hgrow="ALWAYS"/>
+                                <Button text="%btn.detect" styleClass="secondary-button" onAction="#handleDetectUserData"/>
+                                <Button text="%settings.btn.browse" styleClass="secondary-button" onAction="#handleBrowseUserData"/>
+                            </HBox>
+                            
+                            <Region prefHeight="10"/>
+                            
+                            <HBox alignment="CENTER_LEFT" spacing="10">
+                                <VBox spacing="5" HBox.hgrow="ALWAYS">
+                                    <Label text="Open user data folder" styleClass="settings-check"/>
+                                    <Label text="Browse where this mod stores saves and player profiles." styleClass="status-subtitle"/>
+                                </VBox>
+                                <Button text="Open" styleClass="secondary-button" onAction="#handleOpenUserData"/>
+                            </HBox>
+                            
+                            <Region prefHeight="10"/>
+                            
+                            <HBox alignment="CENTER_LEFT" spacing="10">
+                                <VBox spacing="5" HBox.hgrow="ALWAYS">
+                                    <Label text="%userdata.backup.title" styleClass="settings-check"/>
+                                    <Label text="%userdata.backup.desc" styleClass="status-subtitle"/>
+                                </VBox>
+                                <Button text="Backup" styleClass="secondary-button" onAction="#handleBackupUserData"/>
+                            </HBox>
+                            
+                            <Region prefHeight="10"/>
+                            
+                            <HBox alignment="CENTER_LEFT" spacing="10">
+                                <VBox spacing="5" HBox.hgrow="ALWAYS">
+                                    <Label text="%userdata.restore.title" styleClass="settings-check"/>
+                                    <Label text="%userdata.restore.desc" styleClass="status-subtitle"/>
+                                </VBox>
+                                <Button text="Restore" styleClass="secondary-button" onAction="#handleRestoreUserData"/>
+                            </HBox>
+                        </VBox>
+                    </ScrollPane>
+                </VBox>
+                
+                <!-- ABOUT VIEW -->
+                <VBox fx:id="aboutView" styleClass="main-content" spacing="20" visible="false">
+                    <padding>
+                        <Insets top="40" right="40" bottom="40" left="40"/>
+                    </padding>
+                    <Text fx:id="pageTitleAbout" text="%tab.about" styleClass="page-title"/>
+                    
+                    <VBox styleClass="status-card" spacing="10">
+                        <padding>
+                            <Insets top="20" right="20" bottom="20" left="20"/>
+                        </padding>
+                        <Label text="%app.title" styleClass="status-title" wrapText="true"/>
+                        <Label text="%about.version" styleClass="status-subtitle" wrapText="true"/>
+                        <Label text="%about.desc" styleClass="status-subtitle" wrapText="true"/>
+                        <Label text=" "/>
+                        <HBox alignment="CENTER_LEFT" spacing="15">
+                            <Label text="Icon and mod assets provided by the Wars of Liberty Team." styleClass="status-subtitle" wrapText="true"/>
+                        </HBox>
+                        <Label text=" "/>
+                        <Label text="%about.copyright" styleClass="status-subtitle" wrapText="true"/>
+                        <Label text="%about.link" styleClass="status-subtitle" wrapText="true"/>
+                    </VBox>
+                </VBox>
+                
+                <!-- NOTIFICATION POPUP -->
+                <AnchorPane fx:id="notificationOverlay" pickOnBounds="false" visible="false" managed="false">
+                    <VBox fx:id="notificationPanel" styleClass="notification-panel" AnchorPane.topAnchor="5" AnchorPane.rightAnchor="40" prefWidth="380">
+                        <HBox alignment="CENTER_LEFT" styleClass="notification-header">
+                            <Label text="%notify.title" styleClass="notification-title" HBox.hgrow="ALWAYS"/>
+                            <Region HBox.hgrow="ALWAYS"/>
+                            <Label text="Mark all read" styleClass="notification-action" onMouseClicked="#handleClearNotifications"/>
+                            <Label text=" · " styleClass="notification-action"/>
+                            <Label text="Clear" styleClass="notification-action" onMouseClicked="#handleClearNotifications"/>
+                        </HBox>
+                        <VBox fx:id="notificationList" styleClass="notification-list" spacing="0">
+                            <!-- Items injected by controller -->
+                        </VBox>
+                    </VBox>
+                </AnchorPane>
+                
+            </StackPane>
+        </VBox>
+    </HBox>
+</AnchorPane>

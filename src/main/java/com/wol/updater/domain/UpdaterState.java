@@ -1,0 +1,18 @@
+package com.wol.updater.domain;
+
+public enum UpdaterState {
+    NO_INSTALLATION,
+    INVALID_INSTALLATION,
+    CHECKING,
+    UP_TO_DATE,
+    UPDATE_AVAILABLE,
+    INCOMPLETE_INSTALLATION,
+    CORRUPTED_INSTALLATION,
+    DOWNLOADING,
+    VERIFYING,
+    INSTALLING,
+    COMPLETED,
+    CANCELLED,
+    PAUSED,
+    ERROR
+}

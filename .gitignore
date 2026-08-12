@@ -1,4 +1,5 @@
 target/
+/dist/
 
 *.class
 *.log
@@ -26,6 +27,17 @@ Desktop.ini
 /original-binaries/
 /game-files/
 /wol-installation/
+/minimal-jre/
+/jpackage-input/
+/competitor/
+
+# Ignore all markdown files except README.md
+*.md
+!README.md
+
+# Ignore temporary scratch scripts
+*.py
+TestImage.java
 
 *.tmp
 *.temp

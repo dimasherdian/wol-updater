@@ -1,0 +1,96 @@
+<updatedata>
+	<updaterinfo ver="1.4" />
+	<versions>
+		<version ver="1.2.0e" protomd5="3935b6e96bcbc3d1090b9ab4741e600e" strmd5="33fa355ca8651066cb67fa1da95a489a" techmd5="c20a5845f7c68675ed68241922f17cfe" minreqdownload="0" />
+		<version ver="1.2.0d" protomd5="78e34a445d836d78ce64af07fa8ffb9e" strmd5="56e365bd391406038a3e1f7c1995ceb4" techmd5="bdef236a7a819f5176c9a21a233ebde8" minreqdownload="44" />
+		<version ver="1.2.0c2" protomd5="e4c5553ebcbf3928f66ab471ce99d8f8" strmd5="74a757efddca3661db8a4dd9cf09c4e5" techmd5="744fcc2e8a34270d4b9814d608e70c30" minreqdownload="43" />
+		<version ver="1.2.0c" protomd5="83e38e101b31781160aba193b48da529" strmd5="d70007e6176dce482fd14110ae67ff52" techmd5="ac83e0c92c28c1bb63c2e8e4bb8b8495" minreqdownload="42" />
+		<version ver="1.2.0b" protomd5="415e551f3853ec1e770f8cd27d79a737" strmd5="8dc527760b65f42733d049ead8517f17" techmd5="ecec272d58a841347f5428d584d252d1" minreqdownload="41" />
+		<version ver="1.2.0a" protomd5="61c5dbf6aad13411edb6230e86f99735" strmd5="64298ca48d3732b98a8956da1d97723e" techmd5="e1bd31339d78ae68d62a4e860b793bb5" minreqdownload="40" />
+		<version ver="1.1.5b" protomd5="0102973b51fa4060059c664e9ee85a8d" strmd5="b7eced819d663dbc217b40cbfe7394fe" techmd5="e1cba4bc9cc0db23335d305726c2b008" minreqdownload="39" />
+		<version ver="1.1.5a" protomd5="bd9b2d2f2c72b2e6fa174922539dd5fd" strmd5="637ff8838763076ee0f06fc2cf5eb980" techmd5="fb775306052da639ccc2b164ba18815a" minreqdownload="38" />
+		<version ver="1.1.5" protomd5="bd9b2d2f2c72b2e6fa174922539dd5fd" strmd5="f81931998bb3fa8f6e5af7e08b96dc81" techmd5="fb775306052da639ccc2b164ba18815a" minreqdownload="37" />
+		<version ver="1.1.4b" protomd5="f0706acc6f9a4ac0a45f0521371c5f05" strmd5="fa9e8001e530b8790b71ab01f2c3b895" techmd5="053d1dc5c844bba899b364cc95bfd748" minreqdownload="36" />
+		<version ver="1.1.4a" protomd5="99c8a070f61695241f019f93f0e211a9" strmd5="b6d12491da6ec0c1bef2611f57ebec1f" techmd5="c36ed3dd54be7a1583227058dcd4dfb5" minreqdownload="35" />
+		<version ver="1.1.3b" protomd5="3d5d4b6d313ea0b6a9f10b50a7381a3c" strmd5="e7c007b04a68d6d990d593267f0588f5" techmd5="d77288b3d7d729327f22c24d2538a661" minreqdownload="34" />
+		<version ver="1.1.3a" protomd5="a2bd31f3384ae31e3963f59082485a1a" strmd5="e6ca0396479f7b4e7a501b1f6ab88836" techmd5="68ea0072c7a7c92305b3ee36a286419f" minreqdownload="33" />
+		<version ver="1.1.2b" protomd5="10e991729aa9d465b30ebfd117d1bb5f" strmd5="6cffee087c090b1b43b0a63ef7bf26aa" techmd5="fe29cffec8a48a80c987665f870dd8ac" minreqdownload="32" />
+		<version ver="1.1.2a" protomd5="6c1b2412c500e49b85ed515504ee2a91" strmd5="a972b4fa5d1f13d320623e0325b6b01f" techmd5="855aae85783b8e1448b248f683c90231" minreqdownload="31" />
+		<version ver="1.1.1d" protomd5="2dcdc4d099fd56495158b884a2ab3536" strmd5="e33f55071aef5de7f20994c17e210789" techmd5="d9df752f1623836125b0d1e918f45184" minreqdownload="30" />
+		<version ver="1.1.1c" protomd5="12bfdbe238382e52bf19c7100d006901" strmd5="e552c2360555720b6bf95cbea66eb1d1" techmd5="90a75c3b7a0892ed1c1db415af5ffb1f" minreqdownload="29" />
+		<version ver="1.1.1b" protomd5="5b3a2f6dfda295746f0ead6f01f79e2e" strmd5="3accc81196c3647ada340559c60f0d52" techmd5="3af958fb4cbc564042c316e1c31563bf" minreqdownload="28" />
+		<version ver="1.1.1a" protomd5="877094c44b45cc8016f076d76d7ee9cf" strmd5="e90274d8036bfc74785e61d9b43f7894" techmd5="1370047ea1909be7ab458a4ec99a2cb8" minreqdownload="27" />
+		<version ver="1.1.1" protomd5="21862f98f000b91524b7d512942fa482" strmd5="f1f490d64a85c2710f16d6f82d1123a5" techmd5="ea9d87888a8f01c269f62bd3fd484e95" minreqdownload="26" />
+		<version ver="1.1.0b" protomd5="b41d16d7f0c47aaf41956ebc07992362" strmd5="a081190893864af50f028f64a04e9327" techmd5="dd415e9229fb16c3460e89d034622ab2" minreqdownload="25" />
+		<version ver="1.1.0a" protomd5="25276e229816756e7814228ced47cbe9" strmd5="d84d0582714f0d2511a17f1b1496f93f" techmd5="d4aff90625621b1e1ba6528c7ed9a771" minreqdownload="24" />
+		<version ver="1.1.0" protomd5="f67f8312757ee3779af8e03820e7cb09" strmd5="e1d5a4c8fb5549744145f618b2755f74" techmd5="6f9595e26500040c6996ce7c3d11d3c7" minreqdownload="23" />
+		<version ver="1.0.15f" strmd5="1aeb26401f5b0176fedf05a9d1f75302" techmd5="9fe7f9efa8e22fd1d13860f26ececbe9" protomd5="da8ed88c502bb3d5766f5bdafbb07281" minreqdownload="22" />
+		<version ver="1.0.15e.3" strmd5="9169fb8cc47bcd1571498eb51e89724b" techmd5="1742069bd593058b35f2aa4e45505207" protomd5="85e7f926c966ff17f8fc5c413b983d0a" minreqdownload="21" />
+		<version ver="1.0.15e.2" strmd5="af8b6adcc0a58210aa26dff93ef46165" techmd5="911bc623457166d691520d26df177162" protomd5="b6810ecb0301da55e05923f359e8b9fa" minreqdownload="20" />
+		<version ver="1.0.15e.1" strmd5="af8b6adcc0a58210aa26dff93ef46165" techmd5="b797d24ad110355598103471ad6c379a" protomd5="b6810ecb0301da55e05923f359e8b9fa" minreqdownload="19" />
+		<version ver="1.0.15e.0" strmd5="7722322214740cb448b7ef51e7fa0159" techmd5="b797d24ad110355598103471ad6c379a" protomd5="b6810ecb0301da55e05923f359e8b9fa" minreqdownload="18" />
+		<version ver="1.0.15d" strmd5="7722322214740cb448b7ef51e7fa0159" techmd5="b797d24ad110355598103471ad6c379a" protomd5="30685648c747497f559da5903966990d" minreqdownload="17" />
+		<version ver="1.0.15c" strmd5="3075b7ed620f928675bf496d77f71f3d" techmd5="8c2a64da6bec5fb04e708c6599bc5904" protomd5="a61ada2434ebe71274e5e4731eec679b" minreqdownload="16" />
+		<version ver="1.0.15b" strmd5="8581ee71ff70f60dc0d1ced708d5f4cd" techmd5="6100e09c04cf2f6dfd125cda9129cb89" protomd5="f63726abeabebc7053542db73a997145" minreqdownload="15" />
+		<version ver="1.0.15a" strmd5="46088e533834a8ee2b3f0c1010ffb657" techmd5="aeec2dba9cd8529458461b30f42cc442" protomd5="50f2d05a11d78643efcd54d4af5e2699" minreqdownload="14" />
+		<version ver="1.0.15.1" strmd5="5764c7ed31951e3b9e90a9094e497a9d" techmd5="fd5cc5e8eb7438a90d6abb20de86991f" protomd5="9dad74ccecfbe075ae5aad68101811da" minreqdownload="13" />
+		<version ver="1.0.15.0" strmd5="5764c7ed31951e3b9e90a9094e497a9d" techmd5="e3cb090ae34f010e55d9e2d01223b3ec" protomd5="81198c5a6fa0f50fd51eb2da4e563c9c" minreqdownload="12" />
+		<version ver="1.0.14d" strmd5="09e3e463ff5fb094294bc16cdbb0cecf" techmd5="e3cb090ae34f010e55d9e2d01223b3ec" protomd5="81198c5a6fa0f50fd51eb2da4e563c9c" minreqdownload="11" />
+		<version ver="1.0.14c" strmd5="bc2052b81a8aa851f9cebae49e4635e3" techmd5="e3cb090ae34f010e55d9e2d01223b3ec" protomd5="81198c5a6fa0f50fd51eb2da4e563c9c" minreqdownload="10" />
+		<version ver="1.0.14b" strmd5="452a63bc165cad4c8a59aece795f1ea3" techmd5="83ac789d5eb1131c94837b350e90ba62" protomd5="ae30ed264a339260ee9c5566b4b84232" minreqdownload="9" />
+		<version ver="1.0.14a" strmd5="452a63bc165cad4c8a59aece795f1ea3" techmd5="83ac789d5eb1131c94837b350e90ba62" protomd5="758b1fa765781f869d48c47ff57b1fa5" minreqdownload="8" />
+		<version ver="1.0.14" strmd5="668750bae9bcad2c8471c92a34937cb9" techmd5="effef5faec5ec1c09614701bc82a17b1" protomd5="21cdd11d9bfed229640fe288e9dff309" minreqdownload="7" />
+		<version ver="1.0.13d" strmd5="de5c7ea7944b419032ecebf97533d791" techmd5="0d973f8041b83bf265b882846b97be09" protomd5="2cc689d22020962480aa7ca342cb0ab3" minreqdownload="6" />
+		<version ver="1.0.13c" strmd5="d14d8752c1e8603933241a2cd459fa31" techmd5="c7d691fcf9a6adec0d29a75b08fad179" protomd5="7eb4d57e54f39a8b17ec4a9c027d2020" minreqdownload="5" />
+		<version ver="1.0.13b" strmd5="e8224216da6ddf079d8d1899c9eac2ef" techmd5="d45aa02dd47f42423c2e3140d01c07d5" protomd5="5fe91b923538ce7f988b6d318eff630d" minreqdownload="4" />
+		<version ver="1.0.13a" strmd5="03e90695a7b69575f6c536f792d68ae3" techmd5="df2018fcab92d909cd7fab239fb298a0" protomd5="331f8f260903c62062d298cbb3de0d60" minreqdownload="3" />
+		<version ver="1.0.13" strmd5="d729f2de9382e787bdaaf3f56c3e6d4f" techmd5="1fd9b32546c7cce82259a7b17bbab302" protomd5="bb3faf573e52179f28a1cb03673d6e0c" minreqdownload="2" />
+        <version ver="1.0.1" strmd5="5ea81fba533228eacb962440854102e0" techmd5="9e158a76ae2f0d72f748f62d881c8d83" protomd5="aded668b4c970b858cd22dd46a9a45d6" minreqdownload="1" />
+	</versions>
+	<downloads>
+		<download id="44" link="https://aoe3wol.com/updates/patch120e.tar.xz" alt="https://aoe3wol.com/updates/patch120e.tar.xz" version="1.2.0e" crc32="D175D209" size="9358512"/>
+		<download id="43" link="https://aoe3wol.com/updates/patch120d.tar.xz" alt="https://aoe3wol.com/updates/patch120d.tar.xz" version="1.2.0d" crc32="5D42A984" size="9323464"/>
+		<download id="42" link="https://aoe3wol.com/updates/patch120c2.tar.xz" alt="https://aoe3wol.com/updates/patch120c2.tar.xz" version="1.2.0c2" crc32="E25528C7" size="1686388"/>
+		<download id="41" link="https://aoe3wol.com/updates/patch120c.tar.xz" alt="https://aoe3wol.com/updates/patch120c.tar.xz" version="1.2.0c" crc32="D70B420D" size="11224788"/>
+		<download id="40" link="https://aoe3wol.com/updates/patch120b.tar.xz" alt="https://aoe3wol.com/updates/patch120b.tar.xz" version="1.2.0b" crc32="C02A96A3" size="8518624"/>
+		<download id="39" link="https://aoe3wol.com/updates/patch120a.tar.xz" alt="https://aoe3wol.com/updates/patch120a.tar.xz" version="1.2.0a" crc32="58199E8A" size="217135472" deleteList="etc\\120a_delete.lst" />
+		<download id="38" link="https://aoe3wol.com/updates/patch115b.tar.xz" alt="https://aoe3wol.com/updates/patch115b.tar.xz" version="1.1.5b" crc32="871C84A7" size="7752788" />
+		<download id="37" link="https://aoe3wol.com/updates/patch115A.tar.xz" alt="https://aoe3wol.com/updates/patch115A.tar.xz" version="1.1.5a" crc32="C56E1987" size="7408712" />
+		<download id="36" link="https://aoe3wol.com/updates/patch115.tar.xz" alt="https://aoe3wol.com/updates/patch115.tar.xz" version="1.1.5" crc32="C46F8364" size="7408440" />	
+		<download id="35" link="https://aoe3wol.com/updates/patch114b.tar.xz" alt="https://aoe3wol.com/updates/patch114b.tar.xz" version="1.1.4b" crc32="9464452E" size="7612372" />
+		<download id="34" link="https://aoe3wol.com/updates/patch114a.tar.xz" alt="https://aoe3wol.com/updates/patch114a.tar.xz" version="1.1.4a" crc32="54065255" size="13869240" />
+		<download id="33" link="https://aoe3wol.com/updates/patch113b.tar.xz" alt="https://aoe3wol.com/updates/patch113b.tar.xz" version="1.1.3b" crc32="C05A48E9" size="7550836" />
+		<download id="32" link="https://aoe3wol.com/updates/patch113a.tar.xz" alt="https://aoe3wol.com/updates/patch113a.tar.xz" version="1.1.3a" crc32="ABC5A63B" size="7167596" />
+		<download id="31" link="https://aoe3wol.com/updates/patch112b.tar.xz" alt="https://aoe3wol.com/updates/patch112b.tar.xz" version="1.1.2b" crc32="307C9561" size="7451664" />
+		<download id="30" link="https://aoe3wol.com/updates/patch112a.tar.xz" alt="https://aoe3wol.com/updates/patch112a.tar.xz" version="1.1.2a" crc32="31373790" size="7250548" />
+		<download id="29" link="https://aoe3wol.com/updates/patch111d.tar.xz" alt="https://aoe3wol.com/updates/patch111d.tar.xz" version="1.1.1d" crc32="5C69837F" size="16852160" />
+		<download id="28" link="https://aoe3wol.com/updates/patch111c.tar.xz" alt="https://aoe3wol.com/updates/patch111c.tar.xz" version="1.1.1c" crc32="379453C6" size="44307976" />
+		<download id="27" link="https://aoe3wol.com/updates/patch111b.tar.xz" alt="https://aoe3wol.com/updates/patch111b.tar.xz" version="1.1.1b" crc32="AB7FBFA7" size="1987148" deleteList="etc\\111b_delete.lst" />
+		<download id="26" link="https://aoe3wol.com/updates/patch111a.tar.xz" alt="https://aoe3wol.com/updates/patch111a.tar.xz" version="1.1.1a" crc32="1CD1A07C" size="10172164" deleteList="etc\\111a_delete.lst" />
+		<download id="25" link="https://aoe3wol.com/updates/patch111.tar.xz" alt="http://aoe3wol.com/updates/patch111.tar.xz" version="1.1.1" crc32="2210238F" size="2490096" />
+		<download id="24" link="https://aoe3wol.com/updates/patch110b.tar.xz" alt="http://aoe3wol.com/updates/patch110b.tar.xz" version="1.1.0b" crc32="972C2778" size="8093784" deleteList="etc\\110b_delete.lst" postUpdatePage="etc\\110b_postupinfo.html" />
+		<download id="23" link="https://aoe3wol.com/updates/patch110a.tar.xz" alt="http://aoe3wol.com/updates/patch110a.tar.xz" version="1.1.0a" crc32="DA052BEE" size="5323312" deleteList="etc\\110a_delete.lst" postUpdatePage="etc\\110a_postupinfo.html" />
+		<download id="22" link="https://aoe3wol.com/updates/patch110.tar.xz" alt="http://aoe3wol.com/updates/patch110.tar.xz" version="1.1.0" crc32="3C879D95" size="222630200" deleteList="etc\\110_delete.lst" />
+		<download id="21" link="https://aoe3wol.com/updates/patch15f.tar.xz" alt="http://aoe3wol.com/updates/patch15f.tar.xz" version="1.0.15f" crc32="D010727A" size="1629668" deleteList="etc\\1015f_delete.lst" />
+		<download id="20" link="https://aoe3wol.com/updates/patch15e3.tar.xz" alt="http://aoe3wol.com/updates/patch15e3.tar.xz" version="1.0.15e.3" crc32="ED08A6BC" size="448814292" deleteList="etc\\1015e_delete.lst" />
+		<download id="19" link="https://aoe3wol.com/updates/patch15e2.tar.xz" alt="http://aoe3wol.com/updates/patch15e2.tar.xz" version="1.0.15e.2" crc32="D9EE33E4" size="540578176" />
+		<download id="18" link="https://aoe3wol.com/updates/patch15e1.tar.xz" alt="http://aoe3wol.com/updates/patch15e1.tar.xz" version="1.0.15e.1" crc32="1F5A335B" size="545203428" />
+		<download id="17" link="https://aoe3wol.com/updates/patch15e0.tar.xz" alt="http://aoe3wol.com/updates/patch15e0.tar.xz" version="1.0.15e.0" crc32="F77F7B3E" size="359196976" />
+		<download id="16" link="https://aoe3wol.com/updates/patch15d.tar.xz" alt="http://aoe3wol.com/updates/patch15d.tar.xz" version="1.0.15d" crc32="F5180458" size="10750324" />
+		<download id="15" link="https://aoe3wol.com/updates/patch15c.tar.xz" alt="http://aoe3wol.com/updates/patch15c.tar.xz" version="1.0.15c" crc32="FAED3574" size="18239632" />
+		<download id="14" link="https://aoe3wol.com/updates/patch15b.tar.xz" alt="http://aoe3wol.com/updates/patch15b.tar.xz" version="1.0.15b" crc32="23D756B9" size="4726580" />
+		<download id="13" link="https://aoe3wol.com/updates/patch15a.tar.xz" alt="http://aoe3wol.com/updates/patch15a.tar.xz" version="1.0.15a" crc32="5BAD742A" size="24797092" />
+		<download id="12" link="https://aoe3wol.com/updates/patch151.tar.xz" alt="http://aoe3wol.com/updates/patch151.tar.xz" version="1.0.15.1" crc32="86BBFD29" size="400137728" />
+		<download id="11" link="https://aoe3wol.com/updates/patch150.tar.xz" alt="http://aoe3wol.com/updates/patch150.tar.xz" version="1.0.15.0" crc32="1465E35E" size="243630884" />
+		<download id="10" link="https://aoe3wol.com/updates/patch14d.tar.xz" alt="http://aoe3wol.com/updates/patch14d.tar.xz" version="1.0.14d" crc32="07767900" size="4160920" />
+		<download id="9" link="https://aoe3wol.com/updates/patch14c.tar.xz" alt="http://aoe3wol.com/updates/patch14c.tar.xz" version="1.0.14c" crc32="2B9695E9" size="7649376" />
+		<download id="8" link="https://aoe3wol.com/updates/patch14b.tar.xz" alt="http://aoe3wol.com/updates/patch14b.tar.xz" version="1.0.14b" crc32="4B42DD0A" size="1978536" />
+		<download id="7" link="https://aoe3wol.com/updates/patch14a.tar.xz" alt="http://aoe3wol.com/updates/patch14a.tar.xz" version="1.0.14a" crc32="36D73B55" size="3735024" />
+		<download id="6" link="https://aoe3wol.com/updates/patch14.tar.xz" alt="http://aoe3wol.com/updates/patch14.tar.xz" version="1.0.14" crc32="5A9E3471" size="5942404" />
+		<download id="5" link="https://aoe3wol.com/updates/patch13d.tar.xz" alt="http://aoe3wol.com/updates/patch13d.tar.xz" version="1.0.13d" crc32="0A716DE0" size="7491136" />
+		<download id="4" link="https://aoe3wol.com/updates/patch13c.tar.xz" alt="http://aoe3wol.com/updates/patch13c.tar.xz" version="1.0.13c" crc32="8A8C4D1C" size="114837028" deleteList="etc\\1013c_delete.lst" />
+		<download id="3" link="https://aoe3wol.com/updates/patch13b.tar.xz" alt="http://aoe3wol.com/updates/patch13b.tar.xz" version="1.0.13b" crc32="E1FD588D" size="1893616" deleteList="etc\\1013b_delete.lst" />
+		<download id="2" link="https://aoe3wol.com/updates/patch13a.tar.xz" alt="http://aoe3wol.com/updates/patch13a.tar.xz" version="1.0.13a" crc32="9B174B5C" size="1177520" />
+		<download id="1" link="https://aoe3wol.com/updates/patch13.tar.xz" alt="http://aoe3wol.com/updates/patch13.tar.xz" version="1.0.13" crc32="3D1C0D1E" size="142205496" deleteList="etc\\1013_delete.lst" />
+	</downloads>
+</updatedata>
