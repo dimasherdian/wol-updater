@@ -9,7 +9,7 @@
 
 It started with a simple frustration. The legacy updater for Wars of Liberty looked outdated and lacked visual appeal. Then, the developers released a new C# launcher that behaved surprisingly similar to a Java application. That sparked a thought: *"Why not just build it in Java from the start?"*
 
-But the real breaking point came during an update. I used the new official launcher to update the mod to the latest version. Everything seemed fine until I hit "Play"—the game immediately crashed with an error. 
+But the real breaking point came during an update. I used the new official launcher to update the mod to the latest version. Everything seemed fine until I hit "Play"-the game immediately crashed with an error. 
 
 I spent an entire day trying to fix that error. The last thing I wanted was to re-download gigabytes of mod data all over again just because an update process corrupted a few files.
 
