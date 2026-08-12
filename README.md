@@ -13,7 +13,7 @@ But the real breaking point came during an update. I used the new official launc
 
 I spent an entire day trying to fix that error. The last thing I wanted was to re-download gigabytes of mod data all over again just because an update process corrupted a few files.
 
-That frustrating experience turned into an opportunity. I decided to dive into **reverse engineering** by opening the original `Wars of Liberty Updater - v1.4.exe` using 7-zip to study its inner workings. I wanted to understand exactly how it communicated with the servers, downloaded files, and applied patches. My goal wasn't just to learn; it was to build a fail-safe, atomic updater that guarantees the game won't break if the internet drops or a file fails to extract.
+That frustrating experience turned into create my own updater. I decided to dive into **reverse engineering** by opening the original `Wars of Liberty Updater - v1.4.exe` using 7-zip to study its inner workings. I wanted to understand exactly how it communicated with the servers, downloaded files, and applied patches. My goal wasn't just to learn; it was to build a fail-safe, atomic updater that guarantees the game won't break if the internet drops or a file fails to extract.
 
 **A Huge Thank You to the Devs:** Before going further, I want to make it clear that I absolutely love this mod. I play it almost every single day, and the amount of effort the development team has poured into Wars of Liberty is incredible. This project is my way of giving back to the community by providing a tool that solves a specific connectivity issue.
 
