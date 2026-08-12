@@ -69,6 +69,12 @@ To execute the application directly from source:
 .\mvnw.cmd clean compile javafx:run
 ```
 
+## Privacy & Data Collection
+
+This application **does not** collect, store, or transmit any personal data, telemetry, or analytics. 
+- **Network Requests**: The updater only communicates with the official Wars of Liberty servers strictly to download the required mod updates and manifest files. 
+- **Local Data**: The profile backup feature archives your save games entirely on your local hard drive. No data is ever sent to any third-party server.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 
